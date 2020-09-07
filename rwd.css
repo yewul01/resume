@@ -1,0 +1,55 @@
+@media only screen and (max-width:800px) {
+#header { position: relative; height: 120px; transition: all 0.5s; }
+#header.on { overflow: visible; }
+#header h1 { padding-top: 25px; text-align: center; }
+#header .open-gnb { 
+    display: block; 
+    position: absolute;
+    top: 50%; left: 15px; transform: translateY(-50%);
+    width: 25px; height: 17px;  z-index: 9999999; }
+#header .open-gnb span { 
+    display: block;
+    width: 25px; height: 3px; 
+    background: #757575; margin-bottom: 4px; 
+    border-radius: 10px; transition: all 0.5s;}
+#header.on .open-gnb span:nth-of-type(2) { display: none; }
+#header.on .open-gnb span:nth-of-type(1) {
+    transform: rotate(45deg);
+    position: absolute; top: 10px; left: 0; }
+#header.on .open-gnb span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    position: absolute; top: 10px; left: 0; }
+#header .nav { 
+    display: block;
+    position: absolute; top: 100%; right: 0;
+    transform: translateY(0%); width: 100%;
+    text-align: center;  opacity: 0;}
+#header.on nav { display: block; opacity: 1; }
+#header .nav .depth1 > li { display: block; float: left; width: 50%; }
+#header .nav .depth1 > li:nth-child(1) > a,
+#header .nav .depth1 > li:nth-child(2) > a { border-bottom:none; }
+#header .nav .depth1 > li:nth-child(1) > a,
+#header .nav .depth1 > li:nth-child(3) > a { border-right: none; }
+#header .nav .depth1 > li > a { 
+    font-size: 18px; 
+    padding: 20px 20px;
+    display: block;
+    border: 1px solid #757575a2; }
+#wrap .menu-search { 
+    position:absolute; top:40px; right: 0px;
+    font-size: 25px; padding: 5px; }
+#wrap .menu-search fieldset { 
+    border: none; height: 33px; 
+    border-radius:3px; }
+#wrap .menu-search input { 
+    border:none; background:none; 
+    color:#000; padding-left:0.5em;
+    outline:none; width: 70px; 
+    font-size: 18px;}
+#wrap .menu-search input:after { 
+    content: '\f002'; font-weight: 900;
+    font-family: Font Awesome 5 Free; }
+
+
+
+}
