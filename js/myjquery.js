@@ -123,36 +123,50 @@
     
 
 
-
-
     
 
     // 스크롤 이벤트
-    $(".section").on("mousewheel",function(e, wh){    
+    $(".section").on("mousewheel", function (e, wh) {
         var index = $(this).index()
-		//마우스 휠을 올렸을때	
-          if (wh > 0) {  
-			var prev = $(this).prev().offset().top;
-             $('.depth1 li').eq(index-1).addClass('on')
-             $('.depth1 li').eq(index-1).siblings().removeClass('on')
-	         $("html,body").stop().animate({
-                 scrollTop:prev
-                },800,"linear");
-		//마우스 휠을 내렸을때	 
-          }else if (wh < 0) {  
-			var next = $(this).next().offset().top;
-             $('.depth1 li').eq(index+1).addClass('on')
-             $('.depth1 li').eq(index+1).siblings().removeClass('on')
-			 $("html,body").stop().animate({
-                 scrollTop:next
-                },800,"linear");
-             $('.text-box > h2').stop().animate({
-                 opacity: '1',
-                 bottom: '20px'
-             }, 800, 'linear')
-          }
-          
-        });
+        //마우스 휠을 올렸을때	
+        if (wh > 0) {
+            //변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top위치 저장
+            var prev = $(this).prev().offset().top;
+            $('.depth1 li').eq(index - 1).addClass('on')
+            $('.depth1 li').eq(index - 1).siblings().removeClass('on')
+            //문서 전체를 prev에 저장된 위치로 이동
+            $("html,body").stop().animate({
+                scrollTop: prev
+            }, 800, "linear");
+            //마우스 휠을 내렸을때	 
+        } else if (wh < 0) {
+            //변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
+            var next = $(this).next().offset().top;
+            $('.depth1 li').eq(index + 1).addClass('on')
+            $('.depth1 li').eq(index + 1).siblings().removeClass('on')
+            //문서 전체를 next에 저장된 위치로 이동
+            $("html,body").stop().animate({
+                scrollTop: next
+            }, 800, "linear");
+        }
+
+    });
+
+
+    // 마우스휠 이벤트 발생시 이벤트가 발생한 섹션의 이전화면이나 다음화면 맨위로 정확히 스크롤바 위치시키기
+    $('.section').on('mousewheel', function(e, wh) {
+        if (wh>0) {
+            var prev = $(this).prev().offset().top
+            $('html,body').stop().animate({
+                scrollTop:prev
+            })
+        } else if (wh<0) {
+            var next = $(this).next().offset.top
+            $('html,body').stop().animate({
+                scrollTop:next
+            })
+        }
+    })
 
       
 
@@ -171,22 +185,6 @@
 
     
     
-    // 마우스휠 이벤트 발생시 이벤트가 발생한 섹션의 이전화면이나 다음화면 맨위로 정확히 스크롤바 위치시키기
-    $('.section').on('mousewheel', function(e, wh) {
-        if (wh>0) {
-            var prev = $(this).prev().offset().top
-            $('html,body').stop().animate({
-                scrollTop:prev
-            })
-        } else if (wh<0) {
-            var next = $(this).next().offset.top
-            $('html,body').stop().animate({
-                scrollTop:next
-            })
-        }
-    })
-     
-
 
     // About & Skill & Contact 글자 텍스트 애니매이션
     $(window).scroll(function(){
