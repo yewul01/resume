@@ -223,40 +223,45 @@ body, html { height: 100%; background: #fc4545 }
 .section .skill-box ul li p { padding: 10px 0; font-weight: bold; }
 .section .skill-box .battery { 
     border: 3px solid #000; position: relative; 
-    font-size: 20px; background: #fff; }
+    font-size: 20px; background: #fff;
+    border-radius: 5px; }
 .section .skill-box .battery:after {
     content: ''; position: absolute;
     top: 50%; transform: translateY(-50%);
     right: -2%; border: 2.5px solid #000;
-    height: 54%; width: 1%; background: #fff; }
+    height: 54%; width: 1%; background: #fff;
+    border-radius: 2px;
+}
 
-.section .skill-box .energy { margin: 0.7%; background: limegreen; }
+.section .skill-box .energy { 
+    margin: 0.7%; background: limegreen; opacity: 0;
+    text-align: right; border-radius: 5px; }
 
 .section .skill-box .html { animation: html_bar 1s both  }
-.section .skill-box .css { animation: css_bar 1s both 0.2s }
-.section .skill-box .js { animation: js_bar 1s both 0.4s }
-.section .skill-box .jq { animation: jq_bar 1s both 0.6s }
-.section .skill-box .photoshop { animation: photoshop_bar 1s both 0.8s }
+.section .skill-box .css { animation: css_bar 1s both 0.3s }
+.section .skill-box .js { animation: js_bar 1s both 0.6s }
+.section .skill-box .jq { animation: jq_bar 1s both 0.9s }
+.section .skill-box .photoshop { animation: photoshop_bar 1s both 1.2s }
 
 @keyframes html_bar {
     0% { width: 0% }
-    100% { width: 85% }
+    100% { width: 85%; opacity: 1; }
 }
 @keyframes css_bar {
     0% { width: 0% }
-    100% { width: 80% }
+    100% { width: 80%; opacity: 1; }
 }
 @keyframes js_bar {
     0% { width: 0% }
-    100% { width: 75% }
+    100% { width: 75%; opacity: 1; }
 }
 @keyframes jq_bar {
     0% { width: 0% }
-    100% { width: 75% }
+    100% { width: 75%; opacity: 1; }
 }
 @keyframes photoshop_bar {
     0% { width: 0% }
-    100% { width: 70% }
+    100% { width: 70%; opacity: 1; }
 }
 
 
