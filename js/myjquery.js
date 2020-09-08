@@ -186,6 +186,20 @@
         }
     })
      
+
+
+    // About 섹션 메인 슬라이드 텍스트 애니매이션
+    $(window).scroll(function(){
+        var sct = $(this).scrollTop()
+        var aboutTop = $('#about').offset().top
+        if (sct >= aboutTop ) {
+            $('.section .sec-about .text-box h2').addClass('on')
+        } else {
+            $('.section .sec-about .text-box h2').removeClass('on')
+        }
+    })
+
+
      
 
      // 그래프 애니메이션
