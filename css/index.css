@@ -15,6 +15,7 @@ body, html { height: 100%; background: #fc4545 }
     box-shadow: 0 0 30px -10px #000; }
 #header { position: relative; height: 122px; }
 #header h1 { padding-top: 30px; }
+
 #header .open-gnb { display: none; }
 #header .nav { position: absolute; top: 50%; right: 0;
                transform: translateY(-50%); }
@@ -28,24 +29,6 @@ body, html { height: 100%; background: #fc4545 }
 #header .nav .depth1 > li > a:hover { color: #b4b4b4; }
 
 
-
-
-
-
-#wrap .menu-search { 
-    position:absolute; top:35px; right: 30px;
-    font-size: 25px; padding: 5px; } 
-#wrap .menu-search fieldset { 
-    background: #f1f1f1; 
-    border-radius:3px; height: 35px; }
-#wrap .menu-search input { 
-    border:none; background:none; 
-    color:#000; padding-left:0.5em;
-    outline:none; width: 110px; 
-    font-size: 18px; vertical-align: middle;}
-#wrap .menu-search input:after { 
-    content: '\f002'; font-weight: 900;
-    font-family: Font Awesome 5 Free; }
 
 
 

@@ -211,9 +211,40 @@
         } else {
             $('section .sec-contact .text-box h2').removeClass('on')
         }
+
+        
         
     })
 
+    // 스크롤 내릴때 제목과 헤더부분 겹침현상 수정
+    $(window).scroll(function() {
+        var sct = $(this).scrollTop()
+        var aboutTop = $('#about').offset().top
+        if (sct >= aboutTop ) {
+            $('.header-outer').css({
+                boxShadow: 'none',
+                background: 'none'
+            })
+            $('#header h1').css({
+                display:'none'
+            })
+            $('#header .nav .depth1 > li > a').css({
+                padding:'10px 20px'
+            })
+        } else {
+            $('.header-outer').css({
+                boxShadow: '0 0 30px -10px #000;',
+                background: 'rgba(255, 255, 255, 0.6)'
+            })
+            $('#header h1').css({
+                display:'block'
+            })
+            $('#header .nav .depth1 > li > a').css({
+                padding: '30px 40px'
+            })
+        }
+        
+    })
     
 
 
@@ -222,16 +253,16 @@
 
      
 
-     // 그래프 애니메이션
-    //  var sct = 0;
-    //  $(window).scroll(function () {
-    //      sct = $(this).scrollTop()
-    //      if (sct >= $('.skill').offset().top ) {
-    //         $('.skill-box').stop().fadeIn(300)
-    //     } else {
-    //         $('.skill-box').hide()
-    //     }
-    //  })
+    // 그래프 애니메이션
+     var sct = 0;
+     $(window).scroll(function () {
+         sct = $(this).scrollTop()
+         if (sct >= $('.skill').offset().top ) {
+            $('.battery-box').stop().fadeIn(300)
+        } else {
+            $('.battery-box').hide()
+        }
+     })
      
  
 
