@@ -209,7 +209,6 @@ body, html { height: 100%; background: #fc4545 }
 .section .sec-skill h2 { 
     transform: translateY(100%); opacity: 0; transition: all 0.5s; }
 .section .sec-skill h2.on { transform: translateY(0%); opacity: 1; }
-
 .section .skill-empty img { 
     float: right; width: 45px; height: 45px; position: relative;
     top: 63px; right: 280px; }
