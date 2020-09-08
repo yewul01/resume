@@ -64,7 +64,7 @@
     $('.slide-inner').slick({
         autoplay:true,
         dots:true,
-        autoplaySpeed:4500,
+        autoplaySpeed:2000,
         speed:600,
         slidesToShow:1,
         slidesToScroll:1,
@@ -188,16 +188,36 @@
      
 
 
-    // About 섹션 메인 슬라이드 텍스트 애니매이션
+    // About & Skill & Contact 글자 텍스트 애니매이션
     $(window).scroll(function(){
         var sct = $(this).scrollTop()
+        var skillTop = $('#skill').offset().top
+        var contactTop = $('#contact').offset().top
         var aboutTop = $('#about').offset().top
         if (sct >= aboutTop ) {
             $('.section .sec-about .text-box h2').addClass('on')
         } else {
             $('.section .sec-about .text-box h2').removeClass('on')
         }
+
+        if ( sct >= skillTop ) {
+            $('section .sec-skill .text-box h2').addClass('on')
+        } else {
+            $('section .sec-skill .text-box h2').removeClass('on')
+        }
+
+        if ( sct >= contactTop ) {
+            $('section .sec-contact .text-box h2').addClass('on')
+        } else {
+            $('section .sec-contact .text-box h2').removeClass('on')
+        }
+        
     })
+
+    
+
+
+
 
 
      

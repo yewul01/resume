@@ -219,11 +219,14 @@ body, html { height: 100%; background: #fc4545 }
     background: #fff; margin: 0 auto; border: 2px solid #000; }
 
 .section .sec-skill { border-bottom: 2px solid #000; }
-
-.section .sec-skill h2 { 
+.section .sec-skill .text-box {
     font-size: 120px; padding: 0 365px; color: #fff;
     font-family: 'Merriweather', serif;
-    background: #000; float: left; letter-spacing: 0.3em; }
+    background: #000; float: left; letter-spacing: 0.3em;
+}
+.section .sec-skill h2 { 
+    transform: translateY(100%); opacity: 0; transition: all 0.5s; }
+.section .sec-skill h2.on { transform: translateY(0%); opacity: 1; }
 
 .section .skill-empty img { 
     float: right; width: 45px; height: 45px; position: relative;
@@ -329,10 +332,12 @@ body, html { height: 100%; background: #fc4545 }
     rgba(159, 1, 234, 1) 90%); 
     margin: 0 auto; border: 2px solid #000; }
 .section .sec-contact { border-bottom: 2px solid #000; }
-.section .sec-contact h2 { 
+.section .sec-contact .text-box {
     font-size: 120px; padding: 0 214px; color: #fff;
     font-family: 'Merriweather', serif;
     background: #000; float: left; letter-spacing: 0.3em; }
+.section .sec-contact h2 { transform: translateY(100%); opacity: 0; transition: all 0.5s; }
+.section .sec-contact h2.on { transform: translateY(0%); opacity: 1; }
 .section .contact-empty img { 
     float: right; width: 45px; height: 45px; position: relative;
     top: 63px; right: 280px; }
