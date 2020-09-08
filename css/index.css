@@ -199,8 +199,7 @@ body, html { height: 100%; background: #fc4545 }
 #skill { padding: 35px 0; }
 
 .section .skill { 
-    background: #fff; margin: 0 auto; border: 2px solid #000; }
-
+    background: #fff; margin: 0 auto; border: 2px solid #000; height: 100%; }
 .section .sec-skill { border-bottom: 2px solid #000; }
 .section .sec-skill .text-box {
     font-size: 120px; padding: 0 365px; color: #fff;
@@ -215,7 +214,8 @@ body, html { height: 100%; background: #fc4545 }
     float: right; width: 45px; height: 45px; position: relative;
     top: 63px; right: 280px; }
     
-.section .skill-box { background: rgb(248, 215, 28) }
+.section .skill-box { background: rgb(248, 215, 28); height: 100%; }
+
 
 
 .section .skill-box ul { padding: 12% 0 13% 35%; }
