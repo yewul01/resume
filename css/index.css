@@ -159,8 +159,9 @@ body, html { height: 100%; background: #fc4545 }
 
 /* About : 첫번째 section */
 .section .about { 
-    background: rgb(255, 252, 244); margin: 0 auto; border: 2px solid #000; }
-
+    background: rgb(255, 252, 244); margin: 0 auto; border: 2px solid #000;
+    height: 100%; }
+.section .about-box { height: 100%; }
 .section .sec-about { border-bottom: 2px solid #000; }
 
 .section .sec-about .text-box { 
@@ -212,14 +213,14 @@ body, html { height: 100%; background: #fc4545 }
 .section .skill-empty img { 
     float: right; width: 45px; height: 45px; position: relative;
     top: 63px; right: 280px; }
-    
+.section .inner { bottom: 30px; }
 .section .skill-box { background: rgb(248, 215, 28); height: 100%; }
 
 
 
-.section .skill-box ul { padding: 12% 0 13% 35%; }
+.section .skill-box ul { padding: 8% 0 15% 35%; }
 .section .skill-box ul li { width: 45%; }
-.section .skill-box ul li p { padding: 10px 0; }
+.section .skill-box ul li p { padding: 10px 0; font-weight: bold; }
 .section .skill-box .battery { 
     border: 3px solid #000; position: relative; 
     font-size: 20px; background: #fff; }

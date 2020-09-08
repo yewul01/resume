@@ -233,7 +233,7 @@
             })
         } else {
             $('.header-outer').css({
-                boxShadow: '0 0 30px -10px #000;',
+                boxShadow: '0 0 30px -10px #000',
                 background: 'rgba(255, 255, 255, 0.6)'
             })
             $('#header h1').css({
