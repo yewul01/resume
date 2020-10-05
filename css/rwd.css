@@ -1,3 +1,44 @@
+@media screen and (max-width:1616px) {
+
+
+    /* About */
+    .section .sec-about { background: #000;}
+    .section .sec-about .text-box { 
+        font-size: 120px; padding: 0 330px; color: #fff;
+        font-family: 'Merriweather', serif;
+        background: #000; float: left; letter-spacing: 0.3em; }
+    .section .about-empty img { 
+        float: right; width: 45px; height: 45px; position: relative;
+        top: 63px; right: 280px; display: none; }
+
+
+    /* Skill */
+    .section .sec-skill { background: #000; }
+    .section .sec-skill .text-box {
+        font-size: 120px; padding: 0 360px; color: #fff;
+        font-family: 'Merriweather', serif;
+        background: #000; float: left; letter-spacing: 0.3em; }
+    .section .skill-empty img { 
+        float: right; width: 45px; height: 45px; position: relative;
+        top: 63px; right: 280px; display: none; }
+
+
+
+        
+    /* Contact */
+    .section .sec-contact { background: #000; }
+    .section .sec-contact .text-box {
+        font-size: 120px; padding: 0 360px; color: #fff;
+        font-family: 'Merriweather', serif; }
+    .section .contact-empty img { 
+        float: right; width: 45px; height: 45px; position: relative;
+        top: 63px; right: 280px; display: none; }
+    
+    
+
+}
+
+
 @media only screen and (max-width:800px) {
 #header { position: relative; height: 120px; transition: all 0.5s; }
 #header.on { overflow: visible; }
