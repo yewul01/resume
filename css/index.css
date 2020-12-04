@@ -269,12 +269,25 @@ body, html { height: 100%; background: #fc4545 }
 
 
 /* 포트폴리오 갤러리 : 세번째 section */
-#portfolio { padding: 150px 0;  }
-.portfolio h2 { 
-    font-size: 3.75vw; text-align: center;
-    padding: 25px 0; }
-.portfolio, ul.gallery { height: 100%; }
-.portfolio ul.gallery li { 
+#portfolio { padding: 50px 0;  }
+.section .portfolio { 
+    background: #fff; margin: 0 auto; border: 2px solid #000; height: 100%; }
+.section .port-box { height: 100%; }
+.section .sec-port { height: 100%; }
+.section .sec-port .text-box {
+    font-size: 100px; width: 80%; color: #fff;
+    font-family: 'Merriweather', serif;
+    background: #000; float: left; letter-spacing: 0.3em;
+}
+.section .sec-port .text-box h2 { text-align: center; font-size: 120px; }
+/* .section .sec-port h2 { 
+    transform: translateY(100%); opacity: 0; transition: all 0.5s; }
+.section .sec-port h2.on { transform: translateY(0%); opacity: 1; } */
+.section .port-empty img { 
+    float: right; width: 45px; height: 45px; position: relative;
+    top: 63px; right: 180px; }
+.gallery { height: 100%; }
+.gallery li { 
     float: left; width: 25%; height: 39%;
     overflow: hidden; padding: 10px;
     margin-bottom: 1%; }
