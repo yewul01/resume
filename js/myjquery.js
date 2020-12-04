@@ -126,7 +126,7 @@
     
 
     // 마우스휠 이벤트 발생시 이벤트가 발생한 섹션의 이전화면이나 다음화면 맨위로 정확히 스크롤바 위치시키기
-    $('.section').on('mousewheel', function(event, wh) {
+    $('.section').on('mousewheel', function(e, wh) {
         if (wh > 0) {
             var prev = $(this).prev().offset().top
             $('html,body').stop().animate({
@@ -164,9 +164,10 @@
     // About & Skill & Contact 글자 텍스트 애니매이션
     $(window).scroll(function(){
         var sct = $(this).scrollTop()
-        var skillTop = $('#skill').offset().top
-        var contactTop = $('#contact').offset().top
         var aboutTop = $('#about').offset().top
+        var skillTop = $('#skill').offset().top
+        var portfolioTop = $('#portfolio').offset().top
+        var contactTop = $('#contact').offset().top
         if (sct >= aboutTop ) {
             $('.section .sec-about .text-box h2').addClass('on')
         } else {
@@ -179,11 +180,18 @@
             $('section .sec-skill .text-box h2').removeClass('on')
         }
 
+        if ( sct >= portfolioTop ) {
+            $('section .sec-port .text-box h2').addClass('on')
+        } else {
+            $('section .sec-port .text-box h2').removeClass('on')
+        }
+
         if ( sct >= contactTop ) {
             $('section .sec-contact .text-box h2').addClass('on')
         } else {
             $('section .sec-contact .text-box h2').removeClass('on')
         }
+        
 
         
         
@@ -232,7 +240,7 @@
      var sct = 0;
      $(window).scroll(function () {
          sct = $(this).scrollTop()
-         if (sct >= $('.skill').offset().top ) {
+         if (sct >= $('#skill').offset().top ) {
             $('.battery-box').stop().fadeIn(300)
         } else {
             $('.battery-box').hide()

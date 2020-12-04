@@ -273,22 +273,21 @@ body, html { height: 100%; background: #fc4545 }
 .section .portfolio { 
     background: #fff; margin: 0 auto; border: 2px solid #000; height: 100%; }
 .section .port-box { height: 100%; }
-.section .sec-port { height: 100%; }
-.section .sec-port .text-box {
-    font-size: 100px; width: 80%; color: #fff;
+.section .sec-port { border-bottom: 2px solid #000; }
+.section .sec-port .text-box { width: 80%;
+    font-size: 120px; color: #fff;
     font-family: 'Merriweather', serif;
     background: #000; float: left; letter-spacing: 0.3em;
 }
-.section .sec-port .text-box h2 { text-align: center; font-size: 120px; }
-/* .section .sec-port h2 { 
-    transform: translateY(100%); opacity: 0; transition: all 0.5s; }
-.section .sec-port h2.on { transform: translateY(0%); opacity: 1; } */
+.section .sec-port .text-box h2 { text-align: center; }
 .section .port-empty img { 
     float: right; width: 45px; height: 45px; position: relative;
     top: 63px; right: 180px; }
-.gallery { height: 100%; }
-.gallery li { 
-    float: left; width: 25%; height: 39%;
+.section .sec-port h2 { transform: translateY(100%); opacity: 0; transition: all 0.5s; }
+.section .sec-port h2.on { transform: translateY(0%); opacity: 1; }
+.portfolio, ul.gallery { height: 100%; margin: 80px 30px; }
+.portfolio ul.gallery li { 
+    float: left; width: 25%; height: 30%;
     overflow: hidden; padding: 10px;
     margin-bottom: 1%; }
 
