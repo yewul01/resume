@@ -313,12 +313,13 @@ body, html { height: 100%; background: #fc4545 }
     position:absolute; top:50%;
     left:35%; right:35%;
     transform:translateY(-50%);
-    text-align:center; 
+    text-align:center;
 }
 .galleryPopup .popupList .close {
-    position:absolute; top:-20px; right:-20px; 
+    position:absolute; top:-40px; right:-40px; 
     font-size:40px; color:#fff;
-    background:none; cursor:pointer; }
+    background:none; cursor:pointer;
+}
 .galleryPopup .popupList .arrow {
     position:absolute; top:50%; 
     transform:translateY(-50%);
